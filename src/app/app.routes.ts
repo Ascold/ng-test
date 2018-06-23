@@ -6,6 +6,10 @@ export const AppRoutes: Routes = [
     loadChildren: 'app/features/auth/auth.module#AuthModule'
   },
   {
+    path: 'signup',
+    loadChildren: 'app/features/signup/signup.module#SignupModule'
+  },
+  {
     path: 'dashboard',
     loadChildren: 'app/features/dashboard/dashboard.module#DashboardModule'
   },

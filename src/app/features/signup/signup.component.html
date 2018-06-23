@@ -1,0 +1,17 @@
+<section class="signup-container">
+  <form [formGroup]="form">
+    <div class="input-container">
+      <label for="username">User Name</label>
+      <input formControlName="username" type="text" id="username">
+    </div>
+    <div class="input-container">
+      <label for="email">E-mail</label>
+      <input formControlName="email" type="email" id="email">
+    </div>
+    <div class="input-container">
+      <label for="pass">Password</label>
+      <input formControlName="password" type="password" id="pass">
+    </div>
+  </form>
+  <button type="button" (click)="submit()">Register</button>
+</section>
