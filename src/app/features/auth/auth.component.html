@@ -1,8 +1,15 @@
 <section class="auth-container">
-  <p>
-    auth works! Login will be added soon
-  </p>
-  <a routerLink="/signup">Create account</a>
-  <router-outlet></router-outlet>
+  <form [formGroup]="form">
+    <div class="input-container">
+      <label for="email">E-mail</label>
+      <input formControlName="email" type="email" id="email">
+    </div>
+    <div class="input-container">
+      <label for="pass">Password</label>
+      <input formControlName="password" type="password" id="pass">
+    </div>
+  </form>
+  <button type="button" (click)="submit()" class="register-btn">Sign in</button>
+  <a routerLink="/signup" class="signup-link">Create account</a>
 </section>
 

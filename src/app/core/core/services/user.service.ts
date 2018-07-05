@@ -15,4 +15,9 @@ export class UserService {
     return this.http.post(url, data);
   }
 
+  public login(data): Observable<any> {
+    const url = host + '/users/login';
+    return this.http.post(url, data);
+  }
+
 }
