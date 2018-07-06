@@ -1,3 +1,10 @@
-<p>
-  home works!
-</p>
+<section class="home-container">
+
+  <p>
+    home works!
+  </p>
+  <button type="button" (click)="getUsers()" class="submit-btn">Get Users</button>
+  <ul>
+    <li *ngFor="let user of users">{{ user.username }}</li>
+  </ul>
+</section>

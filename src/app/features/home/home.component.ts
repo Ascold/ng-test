@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from '../../core/core/services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public users: Array<any> = [];
+
+  constructor(private _userService: UserService) {
+  }
 
   ngOnInit() {
   }
 
+  public getUsers() {
+    this._userService.getAll().subscribe(success => {
+      console.log('success', success);
+      this.users = success;
+    }, error => {
+      console.log('error', error);
+    });
+  }
 }
